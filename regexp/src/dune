@@ -1,0 +1,4 @@
+(executable
+ (name regex)
+ (modules regex)
+ (libraries str))

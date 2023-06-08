@@ -10,6 +10,7 @@
 4. [포인터와 동일성](equality/)
 5. [파일 읽고 쓰기](file-io/)
 6. [비교 연산](compare/)
+7. [정규식](regexp/)
 
 ## 참고자료
 - [Real World OCaml](https://dev.realworldocaml.org/)
