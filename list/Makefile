@@ -10,4 +10,4 @@ all:
 
 clean:
 	$(DUNE) clean
-	$(RM) -rf compare
+	$(RM) -rf $(BIN)
