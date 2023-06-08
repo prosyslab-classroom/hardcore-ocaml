@@ -1,0 +1,3 @@
+(executable
+ (name empty)
+ (modules empty))

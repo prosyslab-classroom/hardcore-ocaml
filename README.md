@@ -7,10 +7,11 @@
 1. [꼬리 재귀](tail-recursion/)
 2. [리스트](list/)
 3. [문자열](string/)
-4. [포인터와 동일성](equality/)
-5. [파일 읽고 쓰기](file-io/)
-6. [비교 연산](compare/)
-7. [정규식](regexp/)
+4. [빈 리스트](empty/)
+5. [포인터와 동일성](equality/)
+6. [파일 읽고 쓰기](file-io/)
+7. [비교 연산](compare/)
+8. [정규식](regexp/)
 
 ## 참고자료
 - [Real World OCaml](https://dev.realworldocaml.org/)
