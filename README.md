@@ -5,7 +5,7 @@
 - [opam](https://opam.ocaml.org)이 설치되어 있는 환경을 가정한다.
 - 아래 명령어로 필요한 패키지를 설치한다.
 ```console
-$ opam install dune memtrace
+$ opam install dune memtrace memtrace-viewer
 ```
 
 ## 순서
@@ -20,6 +20,7 @@ $ opam install dune memtrace
 7. [비교 연산](compare/)
 8. [정규식](regexp/)
 9. [직렬화](serialize/)
+10. [프로파일링](profiling/)
 
 ## 참고자료
 - [Real World OCaml](https://dev.realworldocaml.org/)
