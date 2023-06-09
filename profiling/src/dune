@@ -1,0 +1,4 @@
+(executable
+ (name profiling)
+ (modules profiling)
+ (libraries memtrace))
