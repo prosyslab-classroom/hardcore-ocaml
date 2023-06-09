@@ -19,6 +19,7 @@ $ opam install dune memtrace
 6. [파일 읽고 쓰기](file-io/)
 7. [비교 연산](compare/)
 8. [정규식](regexp/)
+9. [직렬화](serialize/)
 
 ## 참고자료
 - [Real World OCaml](https://dev.realworldocaml.org/)

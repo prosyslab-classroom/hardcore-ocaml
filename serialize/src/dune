@@ -1,0 +1,7 @@
+(executable
+ (name gen)
+ (modules gen))
+
+(executable
+ (name read)
+ (modules read))
