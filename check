@@ -1,0 +1,132 @@
+#!/bin/bash
+start_time=`date +%s.%N`
+timeout 180 ./compare/compare -opt 10000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "compare Timeout (180s)"
+elif [ $res -eq 0 ]; then
+  echo "compare Elapsed: ${elapsed_time}"
+else
+  echo "compare Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 60 ./empty/empty -opt 10000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "empty Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "empty Elapsed: ${elapsed_time}"
+else
+  echo "empty Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 60 ./equality/equality -opt 1000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "equality Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "equality Elapsed: ${elapsed_time}"
+else
+  echo "equality Not Implemented"
+fi
+
+timeout 180 ./file-io/gen 100000000
+start_tim=`date +%s.%N`
+timeout 180 ./file-io/read -opt large.txt &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "file-io Timeout (180s)"
+elif [ $res -eq 0 ]; then
+  echo "file-io Elapsed: ${elapsed_time}"
+else
+  echo "file-io Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 60 ./list/list -opt 10000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "list Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "list Elapsed: ${elapsed_time}"
+else
+  echo "list Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 120 ./regexp/regexp -opt 1000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "regexp Timeout (120s)"
+elif [ $res -eq 0 ]; then
+  echo "regexp Elapsed: ${elapsed_time}"
+else
+  echo "regexp Not Implemented"
+fi
+
+timeout 180 ./serialize/gen 1000000 &> /dev/null
+start_time=`date +%s.%N`
+timeout 60 ./serialize/gen -opt 1000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "serialize_gen Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "serialize_gen Elapsed: ${elapsed_time}"
+else
+  echo "serialize_gen Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 60 ./serialize/read -opt large.out &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "serialize_read Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "serialize_read Elapsed: ${elapsed_time}"
+else
+  echo "serialize_read Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 60 ./string/string -opt 1000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "string Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "string Elapsed: ${elapsed_time}"
+else
+  echo "string Not Implemented"
+fi
+
+start_time=`date +%s.%N`
+timeout 60 ./tail-recursion/tail -opt 10000000 &> /dev/null
+res=$?
+end_time=`date +%s.%N`
+elapsed_time=$(echo "$end_time - $start_time" | bc)s
+if [ $res -eq 124 ]; then
+  echo "tail-recursion Timeout (60s)"
+elif [ $res -eq 0 ]; then
+  echo "tail-recursion Elapsed: ${elapsed_time}"
+else
+  echo "tail-recursion Not Implemented"
+fi
