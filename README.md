@@ -7,7 +7,7 @@
 - [opam](https://opam.ocaml.org)이 설치되어 있는 환경을 가정한다.
 - 아래 명령어로 필요한 패키지를 설치한다.
 ```console
-$ opam install dune memtrace memtrace-viewer
+$ opam install dune memtrace memtrace_viewer
 ```
 
 ## 순서
