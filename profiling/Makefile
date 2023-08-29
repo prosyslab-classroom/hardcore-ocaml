@@ -5,8 +5,9 @@ RM=@rm
 BIN=profiling
 
 all:
-	$(DUNE) build src/$(BIN).exe
+	$(DUNE) build --instrument-with landmarks src/$(BIN).exe
 	$(LN) _build/default/src/$(BIN).exe $(BIN)
+
 
 clean:
 	$(DUNE) clean

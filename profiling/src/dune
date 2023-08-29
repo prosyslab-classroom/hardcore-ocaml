@@ -1,4 +1,6 @@
 (executable
  (name profiling)
  (modules profiling)
- (libraries memtrace))
+ (libraries memtrace)
+ (instrumentation
+  (backend landmarks --auto)))
