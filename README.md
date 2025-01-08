@@ -23,7 +23,9 @@ $ opam install dune memtrace memtrace_viewer landmarks-ppx
 8. [정규식](regexp/)
 9. [직렬화](serialize/)
 10. [프로파일링](profiling/)
+11. [모듈](module/)
 
 ## 참고자료
 - [Real World OCaml](https://dev.realworldocaml.org/)
 - [값 중심 프로그래밍](doc/value.pdf)
+- [OCaml Programming](https://cs3110.github.io/textbook/cover.html#)
