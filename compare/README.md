@@ -20,7 +20,7 @@ OCaml에서 집합이나 맵을 만들 때는 항상 타입과 비교 (`compare`
 
 ## 규칙
 - 반복문 재귀 호출로 구현하고 `for` 문을 사용하지 않는다.
-- 원소 천 만개를 생성하고 집합으로 변환하는데 30초를 넘지 않아야 한다. 참고로, Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz 에서 아래와 비슷한 성능이 나온다.
+- 원소 천만개를 생성하고 집합으로 변환하는데 30초를 넘지 않아야 한다. 참고로, Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz 에서 아래와 비슷한 성능이 나온다.
 ```console
 $ time ./compare 10000000
 ./compare 10000000  46.86s user 3.29s system 99% cpu 50.149 total

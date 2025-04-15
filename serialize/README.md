@@ -19,8 +19,8 @@ OCaml에서는 자료구조를 직렬화하는 `Marshal` 모듈을 제공한다.
 `generate_opt`와 `read_file_opt`를 작성하라.
 
 ## 규칙
-- 순환문은 재귀 호출로 구현하고 `for` 문을 사용하지 않는다.
-- 백만줄 파일을 읽고 쓰는데 1초을 넘지 않아야 한다. 참고로, Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz 에서 아래와 비슷한 성능이 나온다.
+- 반복문은 재귀 호출로 구현하고 `for` 문을 사용하지 않는다.
+- 백만 줄짜리 파일을 읽고 쓰는데 1초을 넘지 않아야 한다. 참고로, Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz 에서 아래와 비슷한 성능이 나온다.
 ```console
 $ time ./gen 1000000
 ./gen 1000000  12.16s user 0.30s system 99% cpu 12.457 total
